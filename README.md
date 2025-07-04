@@ -1,14 +1,3 @@
----
-
-# 🤖 MQTT Telegram Monitoring Bot
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
-[![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D12-green)](https://nodejs.org/)  
-[![MQTT](https://img.shields.io/badge/MQTT-Supported-brightgreen)](https://mqtt.org/)  
-[![Telegram Bot API](https://img.shields.io/badge/Telegram-Bot%20API-blue)](https://core.telegram.org/bots/api)
-
----
-
 ## 📌 Описание
 
 Этот Telegram-бот предназначен для мониторинга MQTT-топиков с возможностью настройки оповещений, клавиатур и инлайн-кнопок. Бот позволяет:
