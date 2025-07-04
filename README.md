@@ -24,8 +24,8 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/your-repo/mqtt-telegram-bot.git
-   cd mqtt-telegram-bot
+   git clone https://github.com/your-repo/tj-mqtt-telegram.git
+   cd tj-mqtt-telegram
    ```
 
 2. **Установите зависимости:**
