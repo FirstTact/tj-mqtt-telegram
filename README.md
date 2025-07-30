@@ -24,7 +24,7 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/your-repo/tj-mqtt-telegram.git
+   git clone https://github.com/FirstTact/tj-mqtt-telegram.git
    cd tj-mqtt-telegram
    ```
 
