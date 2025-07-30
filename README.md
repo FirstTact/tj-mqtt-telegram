@@ -24,7 +24,8 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/FirstTact/tj-mqtt-telegram.git
+   cd /mnt/data/root
+   git clone https://github.com/your-repo/tj-mqtt-telegram.git
    cd tj-mqtt-telegram
    ```
 
@@ -32,7 +33,7 @@
    ```bash
    npm install
    ```
-
+   
 3. **Создайте файл конфигурации:**
    Создайте файл `newShema.json` в корневой директории проекта. Пример структуры файла см. в разделе [Конфигурация](#⚙️-конфигурация).
 
@@ -40,7 +41,41 @@
    ```bash
    node index.js
    ```
+   
+5. **Установите сервис:**
+   Перейдите в папку system и создайте файл сервиса
+   ```bash
+   cd /etc/systemd/system
+   nano tj-mqtt-telegram
+   ```
+   Скопируйте код в созданный файл
+   ```bash
+   [Unit]
+   Description=Telegram Bot Service
+   After=network.target
 
+   [Service]
+   ExecStart=/usr/bin/node /mnt/data/root/tj-mqtt-telegram/index.js
+   WorkingDirectory= /mnt/data/root/tj-mqtt-telegram
+   Restart=always
+   RestartSec=5
+   User= root 
+   Environment=NODE_ENV=production
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+6. Перезагрузите службы
+   ```bash
+   systemctl daemon-reload
+   ```
+   
+7. Запустите сервис и проверьте работу
+   ```bash
+   systemctl start tj-mqtt-telegram
+   systemctl status tj-mqtt-telegram
+   ```
 ---
 
 ## ⚙️ Конфигурация
